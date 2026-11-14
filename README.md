@@ -4,6 +4,10 @@ Nama Tim : Debuggers
 2. Letisia Victoria Pasaribu
 3. Rakryan Teja Abhimata
 
+# Video Demo : 
+
+# Link Dokumentasi Website :
+
 # Kategori (Website App) - SPPS (Sistem Poin Pelanggaran Siswa)
 
 # 1. Pengenalan Projek
