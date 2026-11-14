@@ -5,8 +5,10 @@ Nama Tim : Debuggers
 3. Rakryan Teja Abhimata
 
 # Video Demo : 
+https://youtu.be/sysxdPh7N8E?si=QyAkp5DjY3_m63gt
 
 # Link Dokumentasi Website :
+https://drive.google.com/drive/folders/1B-3Ds2OLeAbKZvTj7Mcww_mx9ZOY2F5-?usp=sharing
 
 # Kategori (Website App) - SPPS (Sistem Poin Pelanggaran Siswa)
 
