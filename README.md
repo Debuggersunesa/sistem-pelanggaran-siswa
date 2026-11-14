@@ -108,8 +108,9 @@ Setiap halaman memanggil requireRole() dari includes/session.php. Jika role tida
 | `docs/` | ERD dan catatan pengembangan |
 
 # 3. Fronted Documentation
-- Framework: tidak memakai framework. HTML5, Vanilla JavaScript, dan Vanilla CSS, dengan halaman dirender di sisi server oleh PHP.
-- Struktur komponen UI: halaman per role berbagi komponen yang sama dan dipanggil dengan include.
+- Framework: tidak memakai framework. Halaman dirender di sisi server oleh PHP dengan HTML5, CSS murni, dan Vanilla JavaScript yang ditulis langsung di tiap halaman.
+- Library lewat CDN: jQuery 3.6.0 dan Select2 4.1.0 (dropdown dengan pencarian di form pelanggaran, surat, dan siswa), Font Awesome 6.4.0 (ikon), serta font Inter dari Google Fonts. Karena memakai CDN, komputer perlu terhubung ke internet agar tampilan dan dropdown berfungsi normal.
+- Struktur komponen UI: semua halaman setelah login memakai kerangka yang sama (app-wrapper berisi sidebar, topbar, dan page-content).
 
 | Komponen | Lokasi	| Fungsi |
 |---|---|---|
@@ -119,7 +120,10 @@ Setiap halaman memanggil requireRole() dari includes/session.php. Jika role tida
 | Badge poin | halaman pelanggaran | Warna berdasarkan total poin siswa |
 | Template surat | modul perjanjian dan pemanggilan | Tampilan siap cetak |
 
-- Aset: <!-- TODO: isi lokasi folder CSS, JS, gambar/logo, mis. `assets/css`, `assets/js`, `assets/img` -->
+- Aset:
+css/style.css dan css/auth.css untuk gaya (tema navy blue minimalis)
+assets/kop_surat.jpg untuk kop surat
+uploads/siswa/ untuk foto siswa (folder harus bisa ditulis oleh Apache)
 
 # 4. Backend Documentation
 Aplikasi memakai PHP Native tanpa REST API terpisah. Setiap halaman PHP langsung memproses request dan membaca/menulis database.
@@ -129,14 +133,24 @@ Aplikasi memakai PHP Native tanpa REST API terpisah. Setiap halaman PHP langsung
 
 | File | Method	| Fungsi | Role |
 |---|---|---|---|
-| index.php / halaman login	| GET, POST	| Autentikasi pengguna | Semua |
-| admin/... (siswa)	| GET, POST	| CRUD data siswa | Admin |
-| admin/... (guru)	| GET, POST	| CRUD data guru | Admin |
-| admin/... (kelas)	| GET, POST	| CRUD data kelas | Admin |
-| admin/... (jenis pelanggaran)	| GET, POST	| CRUD jenis pelanggaran dan bobot poin | Admin |
-| admin/... (pelanggaran)	| GET, POST	| Entry pelanggaran dan akumulasi poin | Admin, Guru |
-| admin/... (perjanjian)	| GET | Cetak surat perjanjian | Admin |
-| admin/... (surat pemanggilan)	| GET | Cetak surat pemanggilan orang tua | Admin |
+| index.php	| GET, POST	| Form login dan autentikasi (password_verify)	| Semua| 
+| logout.php | GET	| Menghapus sesi lalu kembali ke login	|Semua|
+| admin/dashboard.php	| GET	| Dashboard dan statistik admin	|admin
+| kepsek/dashboard.php	| GET	| Dashboard kepsek | kepsek |
+| guru_pelajaran/dashboard.php	| GET	| Dashboard guru pelajaran	| guru_pelajaran |
+| siswa/dashboard.php	| GET	| Total poin dan riwayat pelanggaran siswa	| siswa |
+| admin/siswa/index.php	|GET, POST |	Daftar siswa, detail, hapus |	admin, kepsek |
+| admin/siswa/tambah.php, edit.php	|GET, POST	| Tambah dan ubah siswa (termasuk foto dan data wali) |	admin, kepsek |
+| admin/siswa/hapus.php	|GET/POST |	Hapus siswa	| admin, kepsek |
+| admin/guru/index.php, tambah.php, edit.php	|GET, POST	| CRUD guru	| admin, kepsek |
+| admin/kelas/index.php, tambah.php, edit.php	|GET, POST	| CRUD kelas	| admin, kepsek |
+| admin/jenis_pelanggaran/index.php, tambah.php, edit.php	|GET, POST	| CRUD jenis| pelanggaran dan bobot poin	| admin, kepsek |
+| admin/pelanggaran/index.php, tambah.php, edit.php	|GET, POST	Daftar dan entry pelanggaran siswa |	admin, kepsek |
+| admin/perjanjian/index.php, cetak.php	|GET, POST|	Surat perjanjian (siswa dan orang tua) |	admin, kepsek |
+| admin/surat_pemanggilan/index.php, cetak.php	|GET, POST	| Surat pemanggilan orang tua |	admin, kepsek |
+| admin/surat_pindah/index.php, tambah.php, cetak.php	| GET, POST	| Surat pindah sekolah |	admin, kepsek |
+| admin/perjanjian/get_siswa_data.php	| GET ?nis=|	Mengembalikan JSON data siswa dan wali untuk mengisi form otomatis	| admin, kepsek|
+| admin/surat_pemanggilan/get_siswa_data.php	| GET ?nis=| Sama seperti di atas untuk surat pemanggilan	| admin, kepsek |
 
 
 ## Catatan keamanan
