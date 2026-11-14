@@ -71,6 +71,16 @@ flowchart TD
     K --> L[Cetak surat]
 ```
 
+## Alur Hak Akses
+Setiap halaman memanggil requireRole() dari includes/session.php. Jika role tidak sesuai, pengguna dialihkan ke dashboard role-nya sendiri.
+
+| Role	| Dashboard	| Modul admin/* |
+|---|---|---|
+| admin | admin/dashboard.php | Boleh | 
+| kepsek | kepsek/dashboard.php	| Boleh |
+| guru_pelajaran | guru_pelajaran/dashboard.php	| Tidak |
+| siswa	| siswa/dashboard.php | Tidak |
+
 ## Instalasi (XAMPP)
 1. Salin folder proyek ke `C:/xampp/htdocs/` dan **beri nama folder `sistem_pelanggaran`** (nama ini dipakai di `includes/session.php`, fungsi `getBaseUrl()`).
 2. Jalankan Apache dan MySQL, buka phpMyAdmin.
