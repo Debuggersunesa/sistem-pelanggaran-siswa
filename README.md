@@ -4,7 +4,7 @@ Nama Tim : Debuggers
 2. Letisia Victoria Pasaribu
 3. Rakryan Teja Abhimata
 
-# Kategori (Website) - SPPS (Sistem Poin Pelanggaran Siswa)
+# Kategori (Website App) - SPPS (Sistem Poin Pelanggaran Siswa)
 
 Aplikasi web untuk mencatat pelanggaran siswa, memantau akumulasi poin, dan mencetak surat (perjanjian dan pemanggilan orang tua). Dibangun dengan PHP Native, MySQL, HTML5, Vanilla JavaScript, dan Vanilla CSS tanpa framework eksternal.
 
