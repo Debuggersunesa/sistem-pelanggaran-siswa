@@ -7,7 +7,7 @@ Nama Tim : Debuggers
 # Kategori (Website App) - SPPS (Sistem Poin Pelanggaran Siswa)
 
 # 1. Pengenalan Projek
-Latar Belakang dan Masalah Utama:
+## Latar Belakang dan Masalah Utama
 Banyak sekolah masih mencatat pelanggaran siswa secara manual di buku catatan atau lembar kertas. Cara ini punya beberapa kelemahan:
 - Pencatatan tersebar dan rawan hilang. Setiap guru mencatat sendiri, sehingga riwayat satu siswa sulit dikumpulkan.
 - Akumulasi poin dihitung manual. Guru BK harus menjumlahkan sendiri, sehingga ada risiko salah hitung dan siswa yang sudah melewati batas poin terlambat ditangani.
@@ -15,11 +15,17 @@ Banyak sekolah masih mencatat pelanggaran siswa secara manual di buku catatan at
 - Pengawasan sulit. Kepala sekolah dan wakil kepala sekolah tidak punya gambaran cepat tentang kondisi kedisiplinan.
 - Siswa tidak tahu posisinya. Siswa baru mengetahui jumlah poinnya saat dipanggil.
 
-# Gambaran Solusi
+## Gambaran Solusi
 
 SPPS adalah aplikasi web yang memusatkan pencatatan pelanggaran siswa dalam satu database. Setiap pelanggaran yang dicatat langsung menambah poin siswa secara otomatis, status poin ditampilkan dengan badge warna, dan surat perjanjian maupun surat pemanggilan orang tua dapat dicetak langsung dari data yang sudah tersimpan, tanpa mengetik ulang. Setiap pengguna melihat dashboard sesuai perannya.
 
 Dibangun dengan PHP Native, MySQL, HTML5, Vanilla JavaScript, dan Vanilla CSS tanpa framework eksternal.
+## Target Pengguna
+| Pengguna | Login dengan | Kegunaan utama |
+| Admin	| username	| Mengelola data master (siswa, guru, kelas, jenis pelanggaran), mencatat pelanggaran, mencetak surat |
+| Kepala sekolah / wakil |	username	| Memantau kondisi kedisiplinan lewat dashboard ringkasan |
+| Guru pelajaran | username | Mencatat pelanggaran siswa dan melihat ringkasan |
+| Siswa | NIS | Melihat riwayat pelanggaran dan total poin sendiri |
 
 ## Fitur
 - Login satu pintu untuk admin, kepsek, guru pelajaran (username) dan siswa (NIS)
