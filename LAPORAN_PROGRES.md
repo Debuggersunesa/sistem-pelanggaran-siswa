@@ -1,6 +1,6 @@
-# Laporan Progres Proyek: Sistem Informasi Pelanggaran Siswa (SISP)
+# Laporan Progres Proyek: Sistem Poin Pelanggaran Siswa (SPPS)
 
-**Tanggal Laporan:** 25 Februari 2026
+**Tanggal Laporan:** 12 November 2026
 **Fase Saat Ini:** Penyelesaian Fase 2 (Antarmuka Data Master & Logika Pembacaan Data)
 **Status Proyek:** Berjalan Sesuai Jadwal (_On Track_)
 
@@ -8,7 +8,7 @@
 
 ## 1. Tinjauan Proyek (_Project Overview_)
 
-Sistem Informasi Pelanggaran Siswa (SISP) adalah sebuah aplikasi berbasis web terintegrasi yang dirancang untuk membantu instansi sekolah dalam mengelola, mencatat, dan memantau tingkat kedisiplinan dan pelanggaraan siswa secara profesional dan efisien.
+Sistem Poin Pelanggaran Siswa (SPPS) adalah sebuah aplikasi berbasis web terintegrasi yang dirancang untuk membantu instansi sekolah dalam mengelola, mencatat, dan memantau tingkat kedisiplinan dan pelanggaraan siswa secara profesional dan efisien.
 
 ## 2. Tumpukan Teknologi (_Tech Stack_)
 
@@ -51,4 +51,4 @@ Fase 3 akan difokuskan secara masif pada operasi manipulasi data (Mutasi). Fokus
 
 **Disusun Oleh,**
 _Manajer Proyek Teknis (Technical Project Manager)_
-Tim Pengembangan SISP
+Tim Pengembangan SPPS
