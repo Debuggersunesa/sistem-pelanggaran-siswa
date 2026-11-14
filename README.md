@@ -100,6 +100,7 @@ flowchart TD
 # 3. Fronted Documentation
 - Framework: tidak memakai framework. HTML5, Vanilla JavaScript, dan Vanilla CSS, dengan halaman dirender di sisi server oleh PHP.
 - Struktur komponen UI: halaman per role berbagi komponen yang sama dan dipanggil dengan include.
+
 | Komponen | Lokasi	| Fungsi |
 |---|---|---|
 | Sidebar navigasi | includes/ | Menu menyesuaikan role pengguna |
