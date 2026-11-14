@@ -24,10 +24,10 @@ Dibangun dengan PHP Native, MySQL, HTML5, Vanilla JavaScript, dan Vanilla CSS ta
 ## Target Pengguna
 | Pengguna | Login dengan | Kegunaan utama |
 |---|---|---|
-| Admin	| username	| Mengelola data master (siswa, guru, kelas, jenis pelanggaran), mencatat pelanggaran, mencetak surat |
-| Kepala sekolah / wakil	| username	| Memantau kondisi kedisiplinan lewat dashboard ringkasan |
-| Guru pelajaran	| username	| Mencatat pelanggaran siswa dan melihat ringkasan |
-| Siswa	| NIS	| Melihat riwayat pelanggaran dan total poin sendiri |
+| Admin | username | Mengelola data master (siswa, guru, kelas, jenis pelanggaran), mencatat pelanggaran, mencetak surat |
+| Kepala sekolah / wakil | username	| Memantau kondisi kedisiplinan lewat dashboard ringkasan |
+| Guru pelajaran | username | Mencatat pelanggaran siswa dan melihat ringkasan |
+| Siswa | NIS | Melihat riwayat pelanggaran dan total poin sendiri |
 
 ## Fitur
 - Login satu pintu untuk admin, kepsek, guru pelajaran (username) dan siswa (NIS)
