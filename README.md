@@ -109,5 +109,25 @@ flowchart TD
 | Badge poin | halaman pelanggaran | Warna berdasarkan total poin siswa |
 | Template surat | modul perjanjian dan pemanggilan | Tampilan siap cetak |
 
+- Aset: <!-- TODO: isi lokasi folder CSS, JS, gambar/logo, mis. `assets/css`, `assets/js`, `assets/img` -->
+
+# 4. Backend Documentation
+Aplikasi memakai PHP Native tanpa REST API terpisah. Setiap halaman PHP langsung memproses request dan membaca/menulis database.
+
+## Daftar Halaman dan Endpoint
+<!-- TODO: lengkapi sesuai file PHP di repo -->
+
+| File | Method	| Fungsi | Role |
+|---|---|---|---|
+| index.php / halaman login	| GET, POST	| Autentikasi pengguna | Semua |
+| admin/... (siswa)	| GET, POST	| CRUD data siswa | Admin |
+| admin/... (guru)	| GET, POST	| CRUD data guru | Admin |
+| admin/... (kelas)	| GET, POST	| CRUD data kelas | Admin |
+| admin/... (jenis pelanggaran)	| GET, POST	| CRUD jenis pelanggaran dan bobot poin | Admin |
+| admin/... (pelanggaran)	| GET, POST	| Entry pelanggaran dan akumulasi poin | Admin, Guru |
+| admin/... (perjanjian)	| GET | Cetak surat perjanjian | Admin |
+| admin/... (surat pemanggilan)	| GET | Cetak surat pemanggilan orang tua | Admin |
+
+
 ## Catatan keamanan
 Data siswa, foto, dan akun asli tidak disertakan dalam repositori ini. Jangan commit file `.sql` berisi data asli atau password database.
