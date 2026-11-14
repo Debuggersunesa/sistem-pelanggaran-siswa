@@ -42,9 +42,34 @@ Dibangun dengan PHP Native, MySQL, HTML5, Vanilla JavaScript, dan Vanilla CSS ta
 # 2. Technical Documentation
 ## Arsitektur Sistem
 Aplikasi berjalan dengan arsitektur web server-side sederhana tanpa framework:
-![Arsitektur Sistem](docs/arsitektur.png)
+
+```mermaid
+flowchart LR
+    U[Browser] -->|HTTP request| P[Apache + PHP Native]
+    P --> S[Session dan cek role]
+    S --> M[Halaman modul per role]
+    M --> D[(MySQL)]
+    D --> M
+    M -->|HTML response| U
+```
+
 ## Diagram Alur Program
-![Diagram Alur Program](docs/alur-program.png)
+
+```mermaid
+flowchart TD
+    A[Buka aplikasi] --> B[Login]
+    B --> C{Kredensial valid?}
+    C -->|Tidak| B
+    C -->|Ya| D{Role?}
+    D -->|Admin| E[Dashboard Admin]
+    D -->|Kepsek| F[Dashboard Kepsek]
+    D -->|Guru| G[Dashboard Guru]
+    D -->|Siswa| H[Dashboard Siswa]
+    E --> J[Entry pelanggaran]
+    G --> J
+    J --> K[Poin diakumulasi]
+    K --> L[Cetak surat]
+```
 
 ## Instalasi (XAMPP)
 1. Salin folder proyek ke `C:/xampp/htdocs/` dan **beri nama folder `sistem_pelanggaran`** (nama ini dipakai di `includes/session.php`, fungsi `getBaseUrl()`).
