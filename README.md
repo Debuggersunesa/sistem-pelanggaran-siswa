@@ -39,6 +39,13 @@ Dibangun dengan PHP Native, MySQL, HTML5, Vanilla JavaScript, dan Vanilla CSS ta
 
 > Status: dalam pengembangan. Halaman Laporan dan Tahun Ajaran belum selesai.
 
+# 2. Technical Documentation
+## Arsitektur Sistem
+Aplikasi berjalan dengan arsitektur web server-side sederhana tanpa framework:
+![Arsitektur Sistem](docs/arsitektur.png)
+## Diagram Alur Program
+![Diagram Alur Program](docs/alur-program.png)
+
 ## Instalasi (XAMPP)
 1. Salin folder proyek ke `C:/xampp/htdocs/` dan **beri nama folder `sistem_pelanggaran`** (nama ini dipakai di `includes/session.php`, fungsi `getBaseUrl()`).
 2. Jalankan Apache dan MySQL, buka phpMyAdmin.
