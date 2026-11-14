@@ -97,5 +97,15 @@ flowchart TD
 | `database/` | Skema dan data awal (tanpa data pribadi) |
 | `docs/` | ERD dan catatan pengembangan |
 
+# 3. Fronted Documentation
+- Framework: tidak memakai framework. HTML5, Vanilla JavaScript, dan Vanilla CSS, dengan halaman dirender di sisi server oleh PHP.
+- Struktur komponen UI: halaman per role berbagi komponen yang sama dan dipanggil dengan include.
+| Komponen | Lokasi	| Fungsi |
+| Sidebar navigasi	includes/	Menu menyesuaikan role pengguna
+| Dashboard ringkasan	admin/, guru_pelajaran/, kepsek/, siswa/	Ringkasan data per role
+| Tabel data dan form	modul di admin/	CRUD siswa, guru, kelas, jenis pelanggaran
+| Badge poin	halaman pelanggaran	Warna berdasarkan total poin siswa
+| Template surat	modul perjanjian dan pemanggilan	Tampilan siap cetak
+
 ## Catatan keamanan
 Data siswa, foto, dan akun asli tidak disertakan dalam repositori ini. Jangan commit file `.sql` berisi data asli atau password database.
